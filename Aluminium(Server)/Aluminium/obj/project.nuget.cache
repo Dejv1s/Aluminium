@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hw3PwTi/gdD7o9BLjtJx7as7LgKKCFO1RfvWc02f26whqFF6v3LhpmG+IaweU0lM1IocB+fRyOwAwk28VVzM8A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\priva\\RiderProjects\\Aluminium\\Aluminium\\Aluminium.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\priva\\.nuget\\packages\\inputsimulator\\1.0.4\\inputsimulator.1.0.4.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'InputSimulator 1.0.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "InputSimulator",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

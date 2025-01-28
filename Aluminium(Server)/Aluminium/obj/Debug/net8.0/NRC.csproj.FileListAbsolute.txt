@@ -1,0 +1,17 @@
+C:\Users\priva\RiderProjects\NRC\NRC\bin\Debug\net8.0\NRC.exe
+C:\Users\priva\RiderProjects\NRC\NRC\bin\Debug\net8.0\NRC.deps.json
+C:\Users\priva\RiderProjects\NRC\NRC\bin\Debug\net8.0\NRC.runtimeconfig.json
+C:\Users\priva\RiderProjects\NRC\NRC\bin\Debug\net8.0\NRC.dll
+C:\Users\priva\RiderProjects\NRC\NRC\bin\Debug\net8.0\NRC.pdb
+C:\Users\priva\RiderProjects\NRC\NRC\bin\Debug\net8.0\WindowsInput.dll
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.csproj.AssemblyReference.cache
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.AssemblyInfoInputs.cache
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.AssemblyInfo.cs
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.csproj.CoreCompileInputs.cache
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.csproj.Up2Date
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.dll
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\refint\NRC.dll
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.pdb
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\NRC.genruntimeconfig.cache
+C:\Users\priva\RiderProjects\NRC\NRC\obj\Debug\net8.0\ref\NRC.dll
