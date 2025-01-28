@@ -47,7 +47,13 @@ git clone https://github.com/Dejv1s/Aluminium
 <h3>Starting</h3>
 
 How to start your project
-
+(MAUI APP)
+```bash
+cd project-name
+dotnet build
+dotnet run
+```
+(SERVER CLIENT)
 ```bash
 cd project-name
 dotnet build
