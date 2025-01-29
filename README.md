@@ -19,7 +19,7 @@
 
 <h2 id="technologies">💻 Technologies</h2>
 
-- .NET 6
+- .NET 8
 - .NET MAUI
 - C#
 - WindowsInput Library
