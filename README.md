@@ -1,4 +1,5 @@
 
+<img align="center" src="https://i.imgur.com/kDSqUQr.png" width="256"></img>
 <h1 align="center" style="font-weight: bold;">Aluminium</h1>
 
 <p align="center">
