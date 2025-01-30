@@ -63,6 +63,12 @@ namespace Aluminium
                 PlayPauseButton.IsEnabled = true;
                 ForwardButton.IsEnabled = true;
                 BackwardButton.IsEnabled = true;
+                VolumeUpButton.IsEnabled = true;
+                VolumeDownButton.IsEnabled = true;
+                MuteButton.IsEnabled = true;
+                AltTabButton.IsEnabled = true;
+                CtrlShiftEscButton.IsEnabled = true;
+                LockButton.IsEnabled = true;
             }
             catch (Exception ex)
             {
@@ -118,6 +124,36 @@ namespace Aluminium
         private void OnBackwardClicked(object sender, EventArgs e)
         {
             SendCommand("backward");
+        }
+
+        private void OnVolumeUpClicked(object sender, EventArgs e)
+        {
+            SendCommand("volumeup");
+        }
+
+        private void OnVolumeDownClicked(object sender, EventArgs e)
+        {
+            SendCommand("volumedown");
+        }
+
+        private void OnMuteClicked(object sender, EventArgs e)
+        {
+            SendCommand("mute");
+        }
+
+        private void OnAltTabClicked(object sender, EventArgs e)
+        {
+            SendCommand("alttab");
+        }
+
+        private void OnCtrlShiftEscClicked(object sender, EventArgs e)
+        {
+            SendCommand("ctrlshiftesc");
+        }
+
+        private void OnLockClicked(object sender, EventArgs e)
+        {
+            SendCommand("lock");
         }
     }
 }

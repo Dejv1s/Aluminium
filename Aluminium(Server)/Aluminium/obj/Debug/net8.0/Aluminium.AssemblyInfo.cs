@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aluminium")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cadc369c1de7f833adfb4352d52a222cdafd7a8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aluminium")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aluminium")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

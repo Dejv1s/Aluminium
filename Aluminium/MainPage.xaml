@@ -20,7 +20,7 @@
         <!-- Content -->
         <StackLayout Grid.Row="1" Spacing="20">
 
-            
+            <!-- IP Address Input -->
             <Frame BackgroundColor="#1E1E1E" 
                    CornerRadius="10" 
                    Padding="15" 
@@ -42,7 +42,13 @@
                     HeightRequest="50" 
                     Clicked="OnConnectClicked" />
 
-            
+            <!-- Media Controls -->
+            <Label Text="Media Controls" 
+                   FontSize="20" 
+                   FontAttributes="Bold" 
+                   TextColor="#FFFFFF" 
+                   HorizontalOptions="Center" />
+
             <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="10">
                 <Button Text="⛶"
                         BackgroundColor="#8A2BE2"
@@ -85,7 +91,85 @@
                         Grid.Column="3" />
             </Grid>
 
-            
+            <!-- Volume Controls -->
+            <Label Text="Volume Controls" 
+                   FontSize="20" 
+                   FontAttributes="Bold" 
+                   TextColor="#FFFFFF" 
+                   HorizontalOptions="Center" />
+
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                <Button Text="🔊"
+                        BackgroundColor="#8A2BE2"
+                        TextColor="#FFFFFF" 
+                        CornerRadius="25" 
+                        HeightRequest="50" 
+                        Clicked="OnVolumeUpClicked" 
+                        IsEnabled="False" 
+                        x:Name="VolumeUpButton" 
+                        Grid.Column="0" />
+
+                <Button Text="🔉"
+                        BackgroundColor="#8A2BE2"
+                        TextColor="#FFFFFF" 
+                        CornerRadius="25" 
+                        HeightRequest="50" 
+                        Clicked="OnVolumeDownClicked" 
+                        IsEnabled="False" 
+                        x:Name="VolumeDownButton" 
+                        Grid.Column="1" />
+
+                <Button Text="🔇"
+                        BackgroundColor="#8A2BE2"
+                        TextColor="#FFFFFF" 
+                        CornerRadius="25" 
+                        HeightRequest="50" 
+                        Clicked="OnMuteClicked" 
+                        IsEnabled="False" 
+                        x:Name="MuteButton" 
+                        Grid.Column="2" />
+            </Grid>
+
+            <!-- System Controls -->
+            <Label Text="System Controls" 
+                   FontSize="20" 
+                   FontAttributes="Bold" 
+                   TextColor="#FFFFFF" 
+                   HorizontalOptions="Center" />
+
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                <Button Text="Alt+Tab"
+                        BackgroundColor="#8A2BE2"
+                        TextColor="#FFFFFF" 
+                        CornerRadius="25" 
+                        HeightRequest="50" 
+                        Clicked="OnAltTabClicked" 
+                        IsEnabled="False" 
+                        x:Name="AltTabButton" 
+                        Grid.Column="0" />
+
+                <Button Text="Ctrl+Shift+Esc"
+                        BackgroundColor="#8A2BE2"
+                        TextColor="#FFFFFF" 
+                        CornerRadius="25" 
+                        HeightRequest="50" 
+                        Clicked="OnCtrlShiftEscClicked" 
+                        IsEnabled="False" 
+                        x:Name="CtrlShiftEscButton" 
+                        Grid.Column="1" />
+
+                <Button Text="Lock"
+                        BackgroundColor="#8A2BE2"
+                        TextColor="#FFFFFF" 
+                        CornerRadius="25" 
+                        HeightRequest="50" 
+                        Clicked="OnLockClicked" 
+                        IsEnabled="False" 
+                        x:Name="LockButton" 
+                        Grid.Column="2" />
+            </Grid>
+
+            <!-- Status Label -->
             <Label x:Name="StatusLabel" 
                    Text="Disconnected" 
                    FontSize="16" 
@@ -96,10 +180,10 @@
 
         <!-- Footer -->
         <Grid Grid.Row="2" ColumnDefinitions="*,Auto,*" VerticalOptions="End">
-            
+            <!-- Left Spacer -->
             <Label Text="" Grid.Column="0" />
 
-            
+            <!-- Footer Text -->
             <Label Text="Aluminium - Made by @dejvis._" 
            FontSize="14" 
            TextColor="#FFFFFF" 
@@ -107,7 +191,7 @@
            VerticalOptions="Center" 
            Grid.Column="1" />
 
-            
+            <!-- Settings Button -->
             <Button Text="⚙️" 
             BackgroundColor="Transparent" 
             TextColor="#1E90FF" 

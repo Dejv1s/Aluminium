@@ -58,6 +58,7 @@ class Program
 
         switch (command.ToLower())
         {
+            // Media Controls
             case "fullscreen":
                 simulator.Keyboard.KeyPress(VirtualKeyCode.VK_F);
                 break;
@@ -70,6 +71,36 @@ class Program
             case "backward":
                 simulator.Keyboard.KeyPress(VirtualKeyCode.LEFT);
                 break;
+            case "volumeup":
+                simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_UP);
+                break;
+            case "volumedown":
+                simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_DOWN);
+                break;
+            case "mute":
+                simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_MUTE);
+                break;
+            case "nexttrack":
+                simulator.Keyboard.KeyPress(VirtualKeyCode.MEDIA_NEXT_TRACK);
+                break;
+            case "previoustrack":
+                simulator.Keyboard.KeyPress(VirtualKeyCode.MEDIA_PREV_TRACK);
+                break;
+
+            // System Controls
+            case "alttab":
+                simulator.Keyboard.ModifiedKeyStroke(VirtualKeyCode.MENU, VirtualKeyCode.TAB);
+                break;
+            case "ctrlshiftesc":
+                simulator.Keyboard.ModifiedKeyStroke(
+                    new[] { VirtualKeyCode.CONTROL, VirtualKeyCode.SHIFT },
+                    VirtualKeyCode.ESCAPE
+                );
+                break;
+            case "lock":
+                simulator.Keyboard.ModifiedKeyStroke(VirtualKeyCode.LWIN, VirtualKeyCode.VK_L);
+                break;
+
             default:
                 Console.WriteLine($"Unknown command: {command}");
                 break;

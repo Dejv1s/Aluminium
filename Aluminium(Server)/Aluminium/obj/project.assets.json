@@ -44,11 +44,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\priva\\RiderProjects\\Aluminium\\Aluminium\\Aluminium.csproj",
+      "projectUniqueName": "C:\\Users\\priva\\source\\repos\\Aluminium\\Aluminium(Server)\\Aluminium\\Aluminium.csproj",
       "projectName": "Aluminium",
-      "projectPath": "C:\\Users\\priva\\RiderProjects\\Aluminium\\Aluminium\\Aluminium.csproj",
+      "projectPath": "C:\\Users\\priva\\source\\repos\\Aluminium\\Aluminium(Server)\\Aluminium\\Aluminium.csproj",
       "packagesPath": "C:\\Users\\priva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\priva\\RiderProjects\\Aluminium\\Aluminium\\obj\\",
+      "outputPath": "C:\\Users\\priva\\source\\repos\\Aluminium\\Aluminium(Server)\\Aluminium\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
