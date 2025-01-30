@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aluminium.MainPage"
              Title="Aluminium Remote"
-             BackgroundColor="#0A0A0A">
+             BackgroundColor="#121212">
 
     <!-- Main Layout -->
     <Grid RowDefinitions="Auto,*,Auto" Padding="20" RowSpacing="20">
@@ -45,7 +45,7 @@
             <!-- Control Buttons -->
             <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="10">
                 <Button Text="⛶"
-                        BackgroundColor="#1E90FF"
+                        BackgroundColor="#8A2BE2"
                         TextColor="#FFFFFF" 
                         CornerRadius="25" 
                         HeightRequest="50" 
@@ -55,7 +55,7 @@
                         Grid.Column="0" />
 
                 <Button Text="⏯️" 
-                        BackgroundColor="#1E90FF"
+                        BackgroundColor="#8A2BE2"
                         TextColor="#FFFFFF" 
                         CornerRadius="25" 
                         HeightRequest="50" 
@@ -65,7 +65,7 @@
                         Grid.Column="1" />
 
                 <Button Text="⏩"
-                        BackgroundColor="#1E90FF"
+                        BackgroundColor="#8A2BE2"
                         TextColor="#FFFFFF" 
                         CornerRadius="25" 
                         HeightRequest="50" 
@@ -75,7 +75,7 @@
                         Grid.Column="2" />
 
                 <Button Text="⏪" 
-                        BackgroundColor="#1E90FF"
+                        BackgroundColor="#8A2BE2"
                         TextColor="#FFFFFF" 
                         CornerRadius="25" 
                         HeightRequest="50" 
@@ -105,7 +105,7 @@
             <!-- Settings Button -->
             <Button Text="⚙️" 
                     BackgroundColor="Transparent" 
-                    TextColor="#FFFFFF" 
+                    TextColor="#1E90FF" 
                     FontSize="20" 
                     HorizontalOptions="End" 
                     VerticalOptions="End" 

@@ -13,18 +13,14 @@ namespace Aluminium
 
         public MainPage()
         {
-            InitializeComponent();
-
-            // Load saved IP address when the page loads
-            LoadSavedIpAddress();
+            InitializeComponent(); // Ensure this is called
+            LoadSavedIpAddress(); // Load saved IP address
         }
 
         private void LoadSavedIpAddress()
         {
-            // Retrieve the saved IP address from preferences
+            // Load the saved IP address from preferences
             string savedIpAddress = Preferences.Get("SavedIpAddress", string.Empty);
-
-            // If a saved IP address exists, set it in the Entry field
             if (!string.IsNullOrEmpty(savedIpAddress))
             {
                 IpAddressEntry.Text = savedIpAddress;
@@ -44,12 +40,12 @@ namespace Aluminium
             try
             {
                 _client = new TcpClient();
-                await _client.ConnectAsync(ipAddress, 13000);
+                await _client.ConnectAsync(ipAddress, 13000); // Connect to the server
                 _stream = _client.GetStream();
 
                 // Update UI
                 StatusLabel.Text = "Connected";
-                StatusLabel.TextColor = Color.FromArgb("#32CD32");
+                StatusLabel.TextColor = Color.FromArgb("#32CD32"); // Green color
                 FullscreenButton.IsEnabled = true;
                 PlayPauseButton.IsEnabled = true;
                 ForwardButton.IsEnabled = true;
@@ -58,7 +54,7 @@ namespace Aluminium
             catch (Exception ex)
             {
                 StatusLabel.Text = "Connection Failed";
-                StatusLabel.TextColor = Color.FromRgba("#FF0000");
+                StatusLabel.TextColor = Color.FromRgba("#FF0000"); // Red color
                 await DisplayAlert("Error", ex.Message, "OK");
             }
         }
@@ -68,11 +64,7 @@ namespace Aluminium
             // Navigate to the Settings page
             await Navigation.PushAsync(new SettingsPage());
         }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            LoadSavedIpAddress(); // Reload the saved IP address every time the page appears
-        }
+
         private async void SendCommand(string command)
         {
             if (_client == null || !_client.Connected)

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aluminium.SettingsPage"
              Title="Settings"
-             BackgroundColor="#0A0A0A">
+             BackgroundColor="#121212">
 
     <!-- Main Layout -->
     <StackLayout Padding="20" Spacing="20">
