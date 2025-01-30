@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aluminium.SettingsPage"
+             Title="Settings"
+             BackgroundColor="#0A0A0A">
+
+    <!-- Main Layout -->
+    <StackLayout Padding="20" Spacing="20">
+
+        <!-- Saved IP Addresses List -->
+        <Label Text="Saved IP Addresses" 
+               FontSize="20" 
+               FontAttributes="Bold" 
+               TextColor="#FFFFFF" 
+               HorizontalOptions="Start" />
+
+        <ListView x:Name="IpAddressList" 
+                  BackgroundColor="#1E1E1E" 
+                  SeparatorColor="#444444" 
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" ColumnDefinitions="*,Auto,Auto">
+                            <Label Text="{Binding}" 
+                                   FontSize="16" 
+                                   TextColor="#FFFFFF" 
+                                   VerticalOptions="Center" 
+                                   Grid.Column="0" />
+
+                            <!-- Edit Button -->
+                            <Button Text="✏️" 
+                                    BackgroundColor="Transparent" 
+                                    TextColor="#1E90FF" 
+                                    FontSize="16" 
+                                    Clicked="OnEditClicked" 
+                                    Grid.Column="1" />
+
+                            <!-- Delete Button -->
+                            <Button Text="🗑️" 
+                                    BackgroundColor="Transparent" 
+                                    TextColor="#FF0000" 
+                                    FontSize="16" 
+                                    Clicked="OnDeleteClicked" 
+                                    Grid.Column="2" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Add New IP Address -->
+        <Frame BackgroundColor="#1E1E1E" 
+               CornerRadius="10" 
+               Padding="15" 
+               HorizontalOptions="FillAndExpand">
+            <StackLayout>
+                <Label Text="Add New IP Address" 
+                       FontSize="16" 
+                       TextColor="#FFFFFF" 
+                       HorizontalOptions="Start" />
+
+                <Entry x:Name="NewIpAddressEntry" 
+                       Placeholder="Enter New IP Address" 
+                       PlaceholderColor="#888888" 
+                       TextColor="#FFFFFF" 
+                       BackgroundColor="Transparent" 
+                       HorizontalOptions="FillAndExpand" 
+                       HeightRequest="50" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Save Button -->
+        <Button Text="Save IP Address" 
+                BackgroundColor="#1E90FF"
+                TextColor="#FFFFFF" 
+                CornerRadius="25" 
+                HeightRequest="50" 
+                Clicked="OnSaveIpAddressClicked" />
+
+        <!-- Back Button -->
+        <Button Text="Back" 
+                BackgroundColor="#444444"
+                TextColor="#FFFFFF" 
+                CornerRadius="25" 
+                HeightRequest="50" 
+                Clicked="OnBackClicked" />
+    </StackLayout>
+</ContentPage>

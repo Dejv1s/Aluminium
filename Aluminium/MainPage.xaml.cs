@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Storage;
+using System;
 using System.Net.Sockets;
 using System.Text;
-using Microsoft.Maui.Controls;
 
 namespace Aluminium
 {
@@ -13,6 +14,21 @@ namespace Aluminium
         public MainPage()
         {
             InitializeComponent();
+
+            // Load saved IP address when the page loads
+            LoadSavedIpAddress();
+        }
+
+        private void LoadSavedIpAddress()
+        {
+            // Retrieve the saved IP address from preferences
+            string savedIpAddress = Preferences.Get("SavedIpAddress", string.Empty);
+
+            // If a saved IP address exists, set it in the Entry field
+            if (!string.IsNullOrEmpty(savedIpAddress))
+            {
+                IpAddressEntry.Text = savedIpAddress;
+            }
         }
 
         private async void OnConnectClicked(object sender, EventArgs e)
@@ -47,6 +63,16 @@ namespace Aluminium
             }
         }
 
+        private async void OnSettingsClicked(object sender, EventArgs e)
+        {
+            // Navigate to the Settings page
+            await Navigation.PushAsync(new SettingsPage());
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            LoadSavedIpAddress(); // Reload the saved IP address every time the page appears
+        }
         private async void SendCommand(string command)
         {
             if (_client == null || !_client.Connected)
