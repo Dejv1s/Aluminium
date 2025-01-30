@@ -22,12 +22,20 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10" ColumnDefinitions="*,Auto,Auto">
+                        <Grid Padding="10" ColumnDefinitions="*,Auto,Auto,Auto">
                             <Label Text="{Binding}" 
                                    FontSize="16" 
                                    TextColor="#FFFFFF" 
                                    VerticalOptions="Center" 
                                    Grid.Column="0" />
+
+                            <!-- Checkmark Button -->
+                            <Button Text="✔️" 
+                                    BackgroundColor="Transparent" 
+                                    TextColor="#32CD32" 
+                                    FontSize="16" 
+                                    Clicked="OnCheckmarkClicked" 
+                                    Grid.Column="1" />
 
                             <!-- Edit Button -->
                             <Button Text="✏️" 
@@ -35,7 +43,7 @@
                                     TextColor="#1E90FF" 
                                     FontSize="16" 
                                     Clicked="OnEditClicked" 
-                                    Grid.Column="1" />
+                                    Grid.Column="2" />
 
                             <!-- Delete Button -->
                             <Button Text="🗑️" 
@@ -43,7 +51,7 @@
                                     TextColor="#FF0000" 
                                     FontSize="16" 
                                     Clicked="OnDeleteClicked" 
-                                    Grid.Column="2" />
+                                    Grid.Column="3" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

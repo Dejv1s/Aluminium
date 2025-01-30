@@ -20,7 +20,7 @@
         <!-- Content -->
         <StackLayout Grid.Row="1" Spacing="20">
 
-            <!-- IP Address Input -->
+            
             <Frame BackgroundColor="#1E1E1E" 
                    CornerRadius="10" 
                    Padding="15" 
@@ -42,7 +42,7 @@
                     HeightRequest="50" 
                     Clicked="OnConnectClicked" />
 
-            <!-- Control Buttons -->
+            
             <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="10">
                 <Button Text="⛶"
                         BackgroundColor="#8A2BE2"
@@ -85,7 +85,7 @@
                         Grid.Column="3" />
             </Grid>
 
-            <!-- Status Label -->
+            
             <Label x:Name="StatusLabel" 
                    Text="Disconnected" 
                    FontSize="16" 
@@ -95,22 +95,27 @@
         </StackLayout>
 
         <!-- Footer -->
-        <Grid Grid.Row="2" ColumnDefinitions="*,Auto">
-            <Label Text="Aluminium - Made by @dejvis._" 
-                   FontSize="14" 
-                   TextColor="#FFFFFF" 
-                   HorizontalOptions="Start" 
-                   VerticalOptions="End" />
+        <Grid Grid.Row="2" ColumnDefinitions="*,Auto,*" VerticalOptions="End">
+            
+            <Label Text="" Grid.Column="0" />
 
-            <!-- Settings Button -->
+            
+            <Label Text="Aluminium - Made by @dejvis._" 
+           FontSize="14" 
+           TextColor="#FFFFFF" 
+           HorizontalOptions="Center" 
+           VerticalOptions="Center" 
+           Grid.Column="1" />
+
+            
             <Button Text="⚙️" 
-                    BackgroundColor="Transparent" 
-                    TextColor="#1E90FF" 
-                    FontSize="20" 
-                    HorizontalOptions="End" 
-                    VerticalOptions="End" 
-                    Clicked="OnSettingsClicked" 
-                    Grid.Column="1" />
+            BackgroundColor="Transparent" 
+            TextColor="#1E90FF" 
+            FontSize="20" 
+            HorizontalOptions="End" 
+            VerticalOptions="Center" 
+            Clicked="OnSettingsClicked" 
+            Grid.Column="2" />
         </Grid>
     </Grid>
 </ContentPage>

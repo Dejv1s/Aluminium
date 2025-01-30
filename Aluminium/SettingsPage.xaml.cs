@@ -108,6 +108,21 @@ namespace Aluminium
             }
         }
 
+        private void OnCheckmarkClicked(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            var ipAddress = button?.BindingContext as string;
+
+            if (ipAddress != null)
+            {
+                // Pass the selected IP address back to the MainPage
+                MessagingCenter.Send(this, "IpAddressSelected", ipAddress);
+
+                // Navigate back to the MainPage
+                Navigation.PopAsync();
+            }
+        }
+
         private async void OnBackClicked(object sender, EventArgs e)
         {
             // Navigate back to the MainPage
