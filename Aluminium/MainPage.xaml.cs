@@ -66,9 +66,9 @@ namespace Aluminium
                 VolumeUpButton.IsEnabled = true;
                 VolumeDownButton.IsEnabled = true;
                 MuteButton.IsEnabled = true;
-                AltTabButton.IsEnabled = true;
                 CtrlShiftEscButton.IsEnabled = true;
-                LockButton.IsEnabled = true;
+                EscButton.IsEnabled = true;
+
             }
             catch (Exception ex)
             {
@@ -141,14 +141,14 @@ namespace Aluminium
             SendCommand("mute");
         }
 
-        private void OnAltTabClicked(object sender, EventArgs e)
-        {
-            SendCommand("alttab");
-        }
-
         private void OnCtrlShiftEscClicked(object sender, EventArgs e)
         {
             SendCommand("ctrlshiftesc");
+        }
+
+        private void OnEscClicked(object sender, EventArgs e)
+        {
+            SendCommand("esc");
         }
 
         private void OnLockClicked(object sender, EventArgs e)

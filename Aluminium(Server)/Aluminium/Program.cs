@@ -52,58 +52,55 @@ class Program
         }
     }
 
-    static void SimulateKeyPress(string command)
+static void SimulateKeyPress(string command)
+{
+    var simulator = new InputSimulator();
+
+    Console.WriteLine($"Received command: {command}");
+
+    switch (command.ToLower())
     {
-        var simulator = new InputSimulator();
+        // Media Controls
+        case "fullscreen":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.VK_F);
+            break;
+        case "playpause":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.SPACE);
+            break;
+        case "forward":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.RIGHT);
+            break;
+        case "backward":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.LEFT);
+            break;
+        case "volumeup":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_UP);
+            break;
+        case "volumedown":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_DOWN);
+            break;
+        case "mute":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_MUTE);
+            break;
+        case "nexttrack":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.MEDIA_NEXT_TRACK);
+            break;
+        case "previoustrack":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.MEDIA_PREV_TRACK);
+            break;
+        case "ctrlshiftesc":
+            simulator.Keyboard.ModifiedKeyStroke(
+                new[] { VirtualKeyCode.CONTROL, VirtualKeyCode.SHIFT },
+                VirtualKeyCode.ESCAPE
+            );
+            break;
+        case "esc":
+            simulator.Keyboard.KeyPress(VirtualKeyCode.ESCAPE);
+            break;
 
-        switch (command.ToLower())
-        {
-            // Media Controls
-            case "fullscreen":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.VK_F);
-                break;
-            case "playpause":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.SPACE);
-                break;
-            case "forward":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.RIGHT);
-                break;
-            case "backward":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.LEFT);
-                break;
-            case "volumeup":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_UP);
-                break;
-            case "volumedown":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_DOWN);
-                break;
-            case "mute":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.VOLUME_MUTE);
-                break;
-            case "nexttrack":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.MEDIA_NEXT_TRACK);
-                break;
-            case "previoustrack":
-                simulator.Keyboard.KeyPress(VirtualKeyCode.MEDIA_PREV_TRACK);
-                break;
-
-            // System Controls
-            case "alttab":
-                simulator.Keyboard.ModifiedKeyStroke(VirtualKeyCode.MENU, VirtualKeyCode.TAB);
-                break;
-            case "ctrlshiftesc":
-                simulator.Keyboard.ModifiedKeyStroke(
-                    new[] { VirtualKeyCode.CONTROL, VirtualKeyCode.SHIFT },
-                    VirtualKeyCode.ESCAPE
-                );
-                break;
-            case "lock":
-                simulator.Keyboard.ModifiedKeyStroke(VirtualKeyCode.LWIN, VirtualKeyCode.VK_L);
-                break;
-
-            default:
-                Console.WriteLine($"Unknown command: {command}");
-                break;
-        }
+        default:
+            Console.WriteLine($"Unknown command: {command}");
+            break;
     }
+}
 }

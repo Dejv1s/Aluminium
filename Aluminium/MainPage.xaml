@@ -132,43 +132,34 @@
 
             <!-- System Controls -->
             <Label Text="System Controls" 
-                   FontSize="20" 
-                   FontAttributes="Bold" 
-                   TextColor="#FFFFFF" 
-                   HorizontalOptions="Center" />
+       FontSize="20" 
+       FontAttributes="Bold" 
+       TextColor="#FFFFFF" 
+       HorizontalOptions="Center" />
 
-            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
-                <Button Text="Alt+Tab"
-                        BackgroundColor="#8A2BE2"
-                        TextColor="#FFFFFF" 
-                        CornerRadius="25" 
-                        HeightRequest="50" 
-                        Clicked="OnAltTabClicked" 
-                        IsEnabled="False" 
-                        x:Name="AltTabButton" 
-                        Grid.Column="0" />
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
 
                 <Button Text="Ctrl+Shift+Esc"
-                        BackgroundColor="#8A2BE2"
-                        TextColor="#FFFFFF" 
-                        CornerRadius="25" 
-                        HeightRequest="50" 
-                        Clicked="OnCtrlShiftEscClicked" 
-                        IsEnabled="False" 
-                        x:Name="CtrlShiftEscButton" 
-                        Grid.Column="1" />
+                        FontSize="17"
+            BackgroundColor="#8A2BE2"
+            TextColor="#FFFFFF" 
+            CornerRadius="25" 
+            HeightRequest="50" 
+            Clicked="OnCtrlShiftEscClicked" 
+            IsEnabled="False" 
+            x:Name="CtrlShiftEscButton" 
+            Grid.Column="0" />
 
-                <Button Text="Lock"
-                        BackgroundColor="#8A2BE2"
-                        TextColor="#FFFFFF" 
-                        CornerRadius="25" 
-                        HeightRequest="50" 
-                        Clicked="OnLockClicked" 
-                        IsEnabled="False" 
-                        x:Name="LockButton" 
-                        Grid.Column="2" />
+                <Button Text="Esc"
+            BackgroundColor="#8A2BE2"
+            TextColor="#FFFFFF" 
+            CornerRadius="25" 
+            HeightRequest="50" 
+            Clicked="OnEscClicked" 
+            IsEnabled="False" 
+            x:Name="EscButton" 
+            Grid.Column="1" />
             </Grid>
-
             <!-- Status Label -->
             <Label x:Name="StatusLabel" 
                    Text="Disconnected" 
@@ -185,21 +176,21 @@
 
             <!-- Footer Text -->
             <Label Text="Aluminium - Made by @dejvis._" 
-           FontSize="14" 
-           TextColor="#FFFFFF" 
-           HorizontalOptions="Center" 
-           VerticalOptions="Center" 
-           Grid.Column="1" />
+                   FontSize="14" 
+                   TextColor="#FFFFFF" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" 
+                   Grid.Column="1" />
 
             <!-- Settings Button -->
             <Button Text="⚙️" 
-            BackgroundColor="Transparent" 
-            TextColor="#1E90FF" 
-            FontSize="20" 
-            HorizontalOptions="End" 
-            VerticalOptions="Center" 
-            Clicked="OnSettingsClicked" 
-            Grid.Column="2" />
+                    BackgroundColor="Transparent" 
+                    TextColor="#1E90FF" 
+                    FontSize="20" 
+                    HorizontalOptions="End" 
+                    VerticalOptions="Center" 
+                    Clicked="OnSettingsClicked" 
+                    Grid.Column="2" />
         </Grid>
     </Grid>
 </ContentPage>
