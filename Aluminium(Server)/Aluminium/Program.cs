@@ -23,23 +23,30 @@ class Program
 
             while (true)
             {
-                TcpClient client = server.AcceptTcpClient();
-                Console.WriteLine("Client connected!");
-
-                NetworkStream stream = client.GetStream();
-
-                byte[] buffer = new byte[1024];
-                int bytesRead;
-
-                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) != 0)
+                try
                 {
-                    string data = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                    Console.WriteLine($"Received: {data}");
+                    TcpClient client = server.AcceptTcpClient();
+                    Console.WriteLine("Client connected!");
 
-                    SimulateKeyPress(data);
+                    NetworkStream stream = client.GetStream();
+
+                    byte[] buffer = new byte[1024];
+                    int bytesRead;
+
+                    while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) != 0)
+                    {
+                        string data = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                        Console.WriteLine($"Received: {data}");
+
+                        SimulateKeyPress(data);
+                    }
+
+                    client.Close();
                 }
-
-                client.Close();
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
             }
         }
         catch (SocketException e)
@@ -102,5 +109,8 @@ static void SimulateKeyPress(string command)
             Console.WriteLine($"Unknown command: {command}");
             break;
     }
+    Console.WriteLine("Press Enter to exit...");
+    Console.ReadLine(); 
 }
+
 }
